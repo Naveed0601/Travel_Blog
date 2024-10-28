@@ -3,7 +3,6 @@ import { FaCircleUser } from "react-icons/fa6";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
 import { FaRegCommentAlt } from "react-icons/fa";
-
 import { Link } from "react-router-dom";
 
 const BlogPost = ({ id, image, title, subtitle, author, date, readTime }) => {
