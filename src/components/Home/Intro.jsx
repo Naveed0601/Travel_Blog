@@ -3,6 +3,7 @@ import title_image from "../../assets/title_image.jpg";
 import travel from "../../assets/travel_image.jpg";
 import eat from "../../assets/eat.jpg";
 import relax from "../../assets/relax.jpg";
+import { Link } from "react-router-dom";
 
 const Intro = () => {
   return (
@@ -30,18 +31,31 @@ const Intro = () => {
           { img: eat, label: "Eat" },
           { img: relax, label: "Relax" },
         ].map((item, index) => (
-          <div key={index} className="relative">
-            <img
-              src={item.img}
-              alt={item.label.toLowerCase()}
-              className="w-[300px]"
-            />
-            <div className="absolute inset-0 w-[300px] flex justify-center items-center">
-              <button className="bg-white text-blue-400 hover:bg-blue-700 hover:text-white w-[150px] h-[50px] text-2xl transition-all duration-700 ease-in-out">
-                {item.label}
-              </button>
+          <Link
+            key={index}
+            to={
+              item.label === "Travel"
+                ? "/travel"
+                : item.label === "Eat"
+                ? "/eat"
+                : item.label === "Relax"
+                ? "/relax"
+                : `/${item.label.toLowerCase()}`
+            }
+          >
+            <div className="relative">
+              <img
+                src={item.img}
+                alt={item.label.toLowerCase()}
+                className="w-[300px]"
+              />
+              <div className="absolute inset-0 w-[300px] flex justify-center items-center">
+                <button className="bg-white text-blue-400 hover:bg-blue-700 hover:text-white w-[150px] h-[50px] text-2xl transition-all duration-700 ease-in-out">
+                  {item.label}
+                </button>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

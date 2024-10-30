@@ -7,6 +7,7 @@ import Photos from "./components/context/Photos";
 import Footer from "./components/context/Footer";
 import Travel from "./components/Travel/Travel";
 import Eat from "./components/Eat/Eat";
+import Relax from "./components/Relax/Relax";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/about/*" element={<About />} />
         <Route path="/travel" element={<Travel />} />
         <Route path="/eat" element={<Eat />} />
+        <Route path="/relax" element={<Relax />} />
       </Routes>
       <SocialMedia />
       <Photos />
