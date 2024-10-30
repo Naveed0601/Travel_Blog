@@ -6,6 +6,7 @@ import { FaRegCommentAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const BlogPost = ({ id, image, title, subtitle, author, date, readTime }) => {
+  console.log(id);
   const [count, setCount] = useState(7);
   const [flag, setFlag] = useState(false);
 
@@ -15,9 +16,9 @@ const BlogPost = ({ id, image, title, subtitle, author, date, readTime }) => {
   };
 
   return (
-    <div className="m-2 p-2 bg-white shadow-sm">
-      <Link to={`/blogs`}>
-        <img src={image} alt={title} className="w-[900px]" />
+    <div className="m-2 p-2 bg-whiteborder  border border-gray-100">
+      <Link to={`/blogs/${id}`}>
+        <img src={image} alt={title} className="w-[900px] pl-12 pt-2" />
         <div className="m-4 p-4 flex">
           <FaCircleUser className="text-4xl" />
           <div className="text-xs ml-2 cursor-default">

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import logo from "../../assets/logo.jpg";
 import {
   FaFacebookF,
@@ -17,11 +18,19 @@ const Header = () => {
       <div>
         <ul className="flex ml-10 space-x-8">
           {["Home", "About", "Travel", "Eat", "Relax"].map((item, index) => (
-            <li
-              key={index}
-              className="text-gray-500 hover:text-blue-400 cursor-pointer"
-            >
-              {item}
+            <li key={index}>
+              <Link
+                to={
+                  item === "Home"
+                    ? "/"
+                    : item === "About"
+                    ? "/about"
+                    : `/${item.toLowerCase()}`
+                }
+                className="text-gray-500 hover:text-blue-400 cursor-pointer"
+              >
+                {item}
+              </Link>
             </li>
           ))}
         </ul>

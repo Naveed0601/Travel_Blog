@@ -1,11 +1,28 @@
+import About from "./components/About/About";
+import Header from "./components/context/Header";
 import Home from "./components/Home/Home";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import SocialMedia from "./components/context/SocialMedia";
+import Photos from "./components/context/Photos";
+import Footer from "./components/context/Footer";
+import Travel from "./components/Travel/Travel";
+import Eat from "./components/Eat/Eat";
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <Home />
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about/*" element={<About />} />
+        <Route path="/travel" element={<Travel />} />
+        <Route path="/eat" element={<Eat />} />
+      </Routes>
+      <SocialMedia />
+      <Photos />
+      <Footer />
+    </Router>
   );
-}
+};
 
 export default App;

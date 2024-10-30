@@ -1,7 +1,7 @@
-import BlogPost from "./BlogPost";
-import blogs from "../../data/blogs";
+import BlogPost from "../Home/BlogPost";
+import blogs from "../../data/Eat";
 
-const Blog = () => {
+const EatBlog = () => {
   console.log(blogs);
   return (
     <div className="flex flex-col justify-center items-center mt-20">
@@ -21,4 +21,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default EatBlog;
