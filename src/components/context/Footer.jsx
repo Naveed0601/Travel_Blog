@@ -6,6 +6,7 @@ import {
   FaPinterestP,
   FaTwitter,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -18,6 +19,11 @@ const Footer = () => {
           It’s easy. Just click “Edit Text” or double click me to add your own
           content and make changes to the font.
         </p>
+        <Link to={"/about"}>
+          <p className="text-lg  text-white hover:text-blue-500 underline underline-offset-1 mt-2">
+            Read More
+          </p>
+        </Link>
       </h1>
       <p className="pt-10 pl-10 text-white">
         © 2035 by Going Places. Powered and secured by Mohd Abdul Naveed
