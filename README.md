@@ -8,6 +8,12 @@ In the project directory, you can run:
 
 ### `npm start`
 
+Package to download for this project
+### react-router-dom
+### tailwind css
+### react-icons
+
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
