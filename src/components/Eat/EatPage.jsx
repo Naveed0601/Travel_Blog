@@ -9,9 +9,9 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { useParams } from "react-router-dom";
-import blogs from "../../data/blogDetails";
+import blogs from "../../data/EatDetails";
 
-const BlogPage = () => {
+const EatPage = () => {
   const { id } = useParams();
   const [count, setCount] = useState(7);
   const [flag, setFlag] = useState(false);
@@ -95,4 +95,4 @@ const BlogPage = () => {
   );
 };
 
-export default BlogPage;
+export default EatPage;

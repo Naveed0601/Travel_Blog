@@ -1,12 +1,12 @@
-import BlogPost from "../Home/BlogPost";
 import blogs from "../../data/Relax";
+import RelaxPost from "./RelaxPost";
 
 const RelaxBlog = () => {
   console.log(blogs);
   return (
     <div className="flex flex-col justify-center items-center mt-20">
       {blogs.map((blog) => (
-        <BlogPost
+        <RelaxPost
           key={blog.id}
           id={blog.id}
           image={blog.image}
